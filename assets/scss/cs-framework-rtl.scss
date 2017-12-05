@@ -1,0 +1,293 @@
+/**
+ *
+ * -----------------------------------------------------------
+ *
+ * Codestar Framework
+ * A Lightweight and easy-to-use WordPress Options Framework
+ *
+ * Copyright 2015 Codestar <info@codestarlive.com>
+ *
+ * -----------------------------------------------------------
+ *
+ */
+@import "compass";
+@import "vendor/mixins";
+
+.ash-framework{
+  margin-left: 20px;
+  margin-right: 0;
+
+  .ash-header{
+    h1{
+      float: right;
+    }
+
+    fieldset{
+      float: left;
+    }
+  }
+
+  .ash-nav{
+    float: right;
+
+    ul{
+      clear: right;
+
+      li{
+        .ash-section-active:after{
+          right: auto;
+          left: 0;
+          border-left-color: #fff;
+          border-right-color: transparent;
+        }
+
+        .ash-arrow:after{
+          content: "\f053";
+          right: auto;
+          left: 10px;
+        }
+
+        &.ash-tab-active .ash-arrow:after{
+          @include transform( rotate(-90deg) );
+        }
+      }
+
+      ul{
+        li{
+          a{
+            padding-right: 25px;
+            padding-left: 15px;
+          }
+        }
+
+        &:before{
+          left: auto;
+          right: 15px;
+        }
+      }
+    }
+
+    .ash-icon{
+      margin-left: 5px;
+      margin-right: 0;
+    }
+  }
+
+  .ash-nav-background{
+    left: auto;
+    right: 0;
+  }
+
+  .ash-content{
+    margin-left: 0;
+    margin-right: 225px;
+
+    .ash-sections{
+      float: right;
+    }
+  }
+
+  .ash-show-all .ash-content {
+    margin-right: 0;
+    overflow: hidden;
+  }
+
+  .ash-expand-all {
+    right: auto;
+    left: 40px;
+  }
+
+  .ash-footer{
+    text-align: left;
+  }
+}
+
+.ash-metabox-framework{
+  margin: -6px -12px -12px -12px;
+
+  .ash-content{
+    .ash-section-title{
+      padding: 20px;
+    }
+  }
+}
+
+.ash-element{
+  .ash-title{
+    float: right;
+  }
+
+  .ash-fieldset{
+    margin-left: 0;
+    margin-right: 30%;
+  }
+}
+
+.ash-pseudo-field{
+  padding: 0 0 0 5px !important;
+}
+
+.ash-field-number em{
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.ash-field-typography select,
+.ash-field-typography .chosen-container{
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.ash-field-checkbox .horizontal li,
+.ash-field-radio .horizontal li{
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+.ash-field-switcher{
+  label{
+    float: right;
+  }
+
+  .ash-text-desc{
+    float: right;
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+.ash-field-color_picker{
+  .ash-alpha-slider{
+    margin-left: 0;
+    margin-right: 2px;
+
+    .ui-slider-handle{
+      margin: 0 -11px;
+    }
+  }
+
+  .ash-alpha-slider-offset{
+    background-position: center right;
+  }
+
+  .ash-alpha-text{
+    right: auto;
+    left: 10px;
+  }
+}
+
+.ash-field-group{
+  .ui-accordion-icons{
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
+  .ui-accordion-header-icon{
+    left: auto;
+    right: .5em;
+  }
+
+  .dashicons-arrow-right:before{
+    content: "\f141";
+  }
+}
+
+.ash-help{
+  right: auto;
+  left: 5px;
+}
+
+.ash-field-icon{
+  .button{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  .ash-icon-preview i{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}
+
+.ash-field-gallery{
+  ul li{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+
+  .button{
+    margin-right: 0;
+    margin-left: 5px;
+  }
+}
+
+.ash-field-sorter .ash-modules{
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.ash-taxonomy-add-fields{
+
+  .ash-fieldset{
+    margin-right: 0;
+  }
+
+  .ash-help{
+    left: -5px;
+    right: auto;
+  }
+}
+
+.ash-taxonomy-edit-fields{
+
+  .ash-fieldset{
+    margin-left: 0;
+    margin-right: 225px;
+  }
+
+  .ash-help{
+    right: auto;
+    left: -5px;
+  }
+}
+
+#ash-save-ajax{
+  right: auto;
+  left: 5px;
+}
+
+.ash-dialog{
+  .ash-element{
+    padding-right: 15px;
+    padding-left: 30px;
+  }
+
+  .ash-shortcode-clone .ash-remove-clone{
+    right: auto;
+    left: 5px;
+  }
+}
+
+#customize-controls .ash-element .ash-fieldset,
+.widget-content .ash-element .ash-fieldset,
+#side-sortables .ash-element .ash-fieldset{
+  margin-right: 0;
+}
+
+@media only screen and (max-width:1200px){
+  .ash-metabox-framework .ash-element .ash-fieldset{
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width:782px){
+  .ash-framework .ash-fieldset,
+  .ash-framework .ash-content{
+      margin-right: 0;
+  }
+}
+
+.ui-dialog{
+  right: auto;
+}
